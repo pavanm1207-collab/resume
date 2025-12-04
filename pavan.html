@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pavan Portfolio</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ===================== Global Styles ===================== */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+  font-family:'Poppins', sans-serif;
+}
+
+body{
+  background: linear-gradient(135deg, #040014, #190044, #32006D, #5300A5);
+  background-size: 300% 300%;
+  animation: gradientFlow 12s ease infinite;
+  color:white;
+}
+
+/* Background gradient animation */
+@keyframes gradientFlow{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+
+/* ===================== Navbar ===================== */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  padding:18px 50px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(15px);
+  border-bottom:1px solid rgba(255,255,255,0.1);
+  z-index:1000;
+}
+
+nav h2{
+  font-size:28px;
+  font-weight:700;
+  background:linear-gradient(45deg,#00eaff,#ff00ff);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+nav a{
+  color:#ffffff;
+  margin-left:28px;
+  font-weight:500;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:#00eaff;
+}
+
+/* ===================== Hero Section ===================== */
+#home{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  padding:120px 70px;
+  justify-content:space-between;
+}
+
+.hero-content{
+  max-width:550px;
+  animation: fadeUp 1.2s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {opacity:0; transform:translateY(40px);}
+  to {opacity:1; transform:translateY(0);}
+}
+
+.hero-content h1{
+  font-size:3.7rem;
+  font-weight:700;
+}
+
+.hero-content p{
+  font-size:1.2rem;
+  margin-top:10px;
+  opacity:0.85;
+}
+
+.hero-content button{
+  margin-top:20px;
+  padding:12px 25px;
+  border:none;
+  font-size:1rem;
+  border-radius:8px;
+  cursor:pointer;
+  background:linear-gradient(45deg,#00eaff,#7b2fff);
+  color:white;
+  transition:0.3s;
+}
+
+.hero-content button:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 20px #00eaff;
+}
+
+/* Hero Image */
+.hero-img img{
+  width:330px;
+  height:330px;
+  border-radius:50%;
+  border:5px solid #00eaff;
+  box-shadow:0 0 40px #00eaff;
+  animation: floatImg 4s ease-in-out infinite;
+}
+
+@keyframes floatImg{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-18px);}
+}
+
+/* ===================== Sections ===================== */
+section{
+  padding:80px 70px;
+}
+
+h2{
+  font-size:2.7rem;
+  margin-bottom:20px;
+  background: linear-gradient(45deg, #00eaff, #ff00ff);
+  -webkit-background-clip: text;
+  color:transparent;
+}
+
+.card{
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.15);
+  border-radius:15px;
+  padding:25px;
+  margin:20px 0;
+  backdrop-filter:blur(10px);
+  box-shadow:0 0 20px rgba(0,0,0,0.4);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:scale(1.02);
+  box-shadow:0 0 25px #00eaff;
+}
+
+/* ===================== Contact Form ===================== */
+form input, form textarea{
+  width:100%;
+  padding:13px;
+  margin-top:12px;
+  border-radius:8px;
+  border:none;
+  outline:none;
+  background:rgba(255,255,255,0.15);
+  color:white;
+}
+
+form button{
+  margin-top:18px;
+  padding:12px 25px;
+  background:linear-gradient(45deg,#00eaff,#ff00ff);
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  color:white;
+}
+
+form button:hover{
+  box-shadow:0 0 20px #ff00ff;
+}
+
+/* ===================== Footer ===================== */
+footer{
+  padding:20px;
+  text-align:center;
+  background:rgba(255,255,255,0.05);
+  margin-top:40px;
+}
+</style>
+
+</head>
+<body>
+
+<!-- ===================== NAVBAR ===================== -->
+<nav>
+  <h2>Pavan</h2>
+  <div>
+    <a href="#home">Home</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#projects">Projects</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<section id="home">
+  <div class="hero-content">
+    <h1>Hello, I'm Pavan M</h1>
+    <p>Computer Science Engineer passionate about Web Development, Coding, Design & Technology.</p>
+
+    <a href="resumepavan.pdf" download>
+      <button>Download Resume</button>
+    </a>
+  </div>
+
+  <div class="hero-img">
+    <img src="pavan.jpg" alt="Pavan">
+  </div>
+</section>
+
+<!-- ===================== SKILLS ===================== -->
+<section id="skills">
+  <h2>Skills</h2>
+
+  <div class="card">
+    <p><b>Languages:</b> C, C++, Java, Python</p>
+    <p><b>Web:</b> HTML, CSS, JavaScript</p>
+    <p><b>Database:</b> MySQL</p>
+    <p><b>Tools:</b> Git, GitHub, VS Code</p>
+  </div>
+</section>
+
+<!-- ===================== EDUCATION ===================== -->
+<section id="education">
+  <h2>Education</h2>
+
+  <div class="card">
+    <p><b>B.E CSE – Malnad College of Engineering</b></p>
+    <p>CGPA: 7.0 | Expected Graduation 2027</p>
+  </div>
+
+  <div class="card">
+    <p><b>PUC – AIPUC Shivamogga</b></p>
+    <p>Percentage: 85.5%</p>
+  </div>
+
+  <div class="card">
+    <p><b>10th – Narayana E Techno School</b></p>
+    <p>Percentage: 70%</p>
+  </div>
+</section>
+
+<!-- ===================== PROJECTS ===================== -->
+<section id="projects">
+  <h2>Projects</h2>
+
+  <div class="card">
+    <p><b>IoT Mini Project</b> – Real-time Data Transmission using IoT Sensors</p>
+  </div>
+
+  <div class="card">
+    <p><b>Hackathon Web App</b> – Built using HTML, CSS & JavaScript</p>
+  </div>
+</section>
+
+<!-- ===================== ACHIEVEMENTS ===================== -->
+<section id="achievements">
+  <h2>Achievements</h2>
+
+  <div class="card">
+    <p>✔ Participated in College Hackathon</p>
+    <p>✔ Organized Technical Events</p>
+    <p>✔ Active Coding Community Member</p>
+  </div>
+</section>
+
+<!-- ===================== CERTIFICATIONS ===================== -->
+<section id="certifications">
+  <h2>Certifications</h2>
+
+  <div class="card">
+    <p>IoT Workshop Training</p>
+    <p>Web Development Hackathon Project</p>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section id="contact">
+  <h2>Contact Me</h2>
+
+  <form>
+    <input type="text" placeholder="Your Name" required />
+    <input type="email" placeholder="Your Email" required />
+    <textarea rows="4" placeholder="Message"></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2025 Pavan | Portfolio Website</p>
+</footer>
+
+</body>
+</html>
